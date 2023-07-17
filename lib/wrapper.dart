@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj_cdc_purchasing/otentikasi/otentikasi.dart';
 import 'package:proj_cdc_purchasing/screens/beranda/beranda.dart';
 
 class Wrapper extends StatefulWidget {
@@ -9,8 +10,10 @@ class Wrapper extends StatefulWidget {
 }
 
 class _WrapperState extends State<Wrapper> {
+  late String? penggunaID = "";
+
   @override
   Widget build(BuildContext context) {
-    return Beranda();
+    return (penggunaID == "") ? Otentikasi() : Beranda();
   }
 }

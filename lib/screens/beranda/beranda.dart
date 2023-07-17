@@ -39,7 +39,23 @@ class _BerandaState extends State<Beranda> {
 
                       // ya
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          /*Navigator.pushReplacementNamed(
+                            context,
+                            "/otentikasi",
+                          );*/
+
+                          /*Navigator.popAndPushNamed(
+                            context,
+                            "/otentikasi",
+                          );*/
+
+                          Navigator.popUntil(
+                            context,
+                            ModalRoute.withName("/"),
+                          );
+
+                        },
                         child: const Text("Ya"),
                       ),
 

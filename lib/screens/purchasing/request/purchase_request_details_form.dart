@@ -333,7 +333,8 @@ class _PurchaseRequestDetailsFormState extends State<PurchaseRequestDetailsForm>
                               child: const Text("Ya"),
                             ),
                           ],
-
+                          actionsAlignment: MainAxisAlignment.center,
+                          elevation: 8.0,
                         );
                       },
                     );

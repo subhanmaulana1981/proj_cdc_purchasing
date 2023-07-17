@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:proj_cdc_purchasing/otentikasi/otentikasi.dart';
+import 'package:proj_cdc_purchasing/screens/beranda/beranda.dart';
 import 'package:proj_cdc_purchasing/screens/purchasing/request/purchase_request_details_form.dart';
 import 'package:proj_cdc_purchasing/screens/purchasing/request/purchase_request_form.dart';
 import 'package:proj_cdc_purchasing/wrapper.dart';
@@ -9,16 +11,29 @@ class AppKrida extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Wrapper(),
+      // home: const Wrapper(),
       routes: {
+        "/": (context) {
+          return Wrapper();
+        },
+
+        "/otentikasi": (context) {
+          return const Otentikasi();
+        },
+
+        "/beranda": (context) {
+          return const Beranda();
+        },
+
         "/purchaseRequestForm": (context) {
-          return PurchaseRequestForm();
+          return const PurchaseRequestForm();
         },
 
         "/purchaseRequestDetailsForm": (context) {
-          return PurchaseRequestDetailsForm();
+          return const PurchaseRequestDetailsForm();
         },
       },
+      initialRoute: "/",
       title: "Krida | Purchasing",
       theme: ThemeData(
         useMaterial3: true,
